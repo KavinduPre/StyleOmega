@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "465009288290",
+    "firebase_url": "https://styleomega-c9441.firebaseio.com",
+    "project_id": "styleomega-c9441",
+    "storage_bucket": "styleomega-c9441.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:465009288290:android:5fa5f509ec541bad",
+        "android_client_info": {
+          "package_name": "com.StyleOmega.android"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "465009288290-h0lq3704ls3no38cnqvdemcsb314iipg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBeDguv9QScCTc7RVNl-hAHvw0BmWZgb4g"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

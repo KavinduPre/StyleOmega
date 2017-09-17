@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.kavindu.styleomega">
+
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        ////////////////////////////////////////////Main Menu
+        <activity android:name=".MainMenu">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        //////////////////////////////////////////Register
+        <activity
+            android:name=".Register"
+            android:label="Register">
+            <intent-filter>
+                <action android:name="com.example.kavindu.styleomega.Register" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        //////////////////////////////////////////Login
+        <activity
+            android:name=".Login"
+            android:label="Login">
+            <intent-filter>
+                <action android:name="com.example.kavindu.styleomega.Login" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        //////////////////////////////////////////ManageAccount
+        <activity android:name=".ManageAccout">
+            <intent-filter>
+                <action android:name="com.example.kavindu.styleomega.ManageAccout" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        //////////////////////////////////////////
+
+        package="com.codekrypt.retroift">
+        <uses-permission android:name="android.permission.INTERNET" />
+
+        <activity
+            android:name=".Explore"
+            android:label="Explore" />
+        <activity
+            android:name=".Items"
+            android:label="@string/title_activity_items"
+
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+    </application>
+
+</manifest>
