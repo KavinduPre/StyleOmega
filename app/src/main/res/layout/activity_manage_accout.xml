@@ -8,7 +8,7 @@
 
     <EditText
         android:id="@+id/edit_fname"
-        android:text="@string/efname"
+
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -23,63 +23,59 @@
 
     <EditText
         android:id="@+id/edit_lname"
-        android:text="@string/elname"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
         android:ems="10"
         android:inputType="textPersonName"
-        tools:layout_constraintTop_creator="1"
-        tools:layout_constraintRight_creator="1"
+        app:layout_constraintLeft_toLeftOf="@+id/edit_fname"
         app:layout_constraintRight_toRightOf="@+id/edit_fname"
-        android:layout_marginTop="18dp"
         app:layout_constraintTop_toBottomOf="@+id/edit_fname"
         tools:layout_constraintLeft_creator="1"
-        app:layout_constraintLeft_toLeftOf="@+id/edit_fname" />
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintTop_creator="1" />
 
     <EditText
         android:id="@+id/edit_uname"
-        android:text="@string/euname"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
         android:ems="10"
         android:inputType="textPersonName"
-        tools:layout_constraintTop_creator="1"
-        tools:layout_constraintRight_creator="1"
+        app:layout_constraintLeft_toLeftOf="@+id/edit_lname"
         app:layout_constraintRight_toRightOf="@+id/edit_lname"
-        android:layout_marginTop="18dp"
         app:layout_constraintTop_toBottomOf="@+id/edit_lname"
         tools:layout_constraintLeft_creator="1"
-        app:layout_constraintLeft_toLeftOf="@+id/edit_lname" />
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintTop_creator="1" />
 
     <EditText
         android:id="@+id/edit_pw"
-        android:text="@string/epw"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         android:ems="10"
         android:inputType="textPersonName"
-        tools:layout_constraintTop_creator="1"
-        tools:layout_constraintRight_creator="1"
+        app:layout_constraintLeft_toLeftOf="@+id/edit_uname"
         app:layout_constraintRight_toRightOf="@+id/edit_uname"
-        android:layout_marginTop="20dp"
         app:layout_constraintTop_toBottomOf="@+id/edit_uname"
         tools:layout_constraintLeft_creator="1"
-        app:layout_constraintLeft_toLeftOf="@+id/edit_uname" />
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintTop_creator="1" />
 
     <EditText
         android:id="@+id/edit_email"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="@string/eemail"
-        tools:layout_constraintTop_creator="1"
-        tools:layout_constraintRight_creator="1"
+        app:layout_constraintLeft_toLeftOf="@+id/edit_pw"
         app:layout_constraintRight_toRightOf="@+id/edit_pw"
-        android:layout_marginTop="22dp"
         app:layout_constraintTop_toBottomOf="@+id/edit_pw"
         tools:layout_constraintLeft_creator="1"
-        app:layout_constraintLeft_toLeftOf="@+id/edit_pw" />
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintTop_creator="1" />
 
     <Button
         android:id="@+id/button"
@@ -98,4 +94,11 @@
         tools:layout_constraintBottom_creator="1"
         tools:layout_constraintLeft_creator="1"
         tools:layout_constraintRight_creator="1" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="68dp"
+        tools:layout_editor_absoluteY="16dp" />
 </android.support.constraint.ConstraintLayout>

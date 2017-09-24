@@ -1,11 +1,7 @@
 package com.example.kavindu.styleomega;
 
 
-
-        import android.content.ContentValues;
-import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
-
+/*
 public class test
 {
     static final String DATABASE_NAME = "login.db";
@@ -16,10 +12,10 @@ public class test
     // Variable to hold the database instance
     public  SQLiteDatabase db;
     // Context of the application using the database.
-  /*  private final Context context;*/
+    private final Context context;
     // Database open/upgrade helper
-    /*private DataBaseHelper dbHelper;*/
-  /*  public  LoginDataBaseAdapter(Context _context)
+    private DataBaseHelper dbHelper;
+    public  LoginDataBaseAdapter(Context _context)
     {
         context = _context;
         dbHelper = new DataBaseHelper(context, DATABASE_NAME, null, DATABASE_VERSION);
@@ -32,7 +28,7 @@ public class test
     public void close()
     {
         db.close();
-    }*/
+    }
 
     public  SQLiteDatabase getDatabaseInstance()
     {
@@ -83,4 +79,4 @@ public class test
         db.update("LOGIN",updatedValues, where, new String[]{userName});
     }
 }
-
+*/

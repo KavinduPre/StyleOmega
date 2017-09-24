@@ -10,43 +10,55 @@ import android.widget.Toast;
 
 public class Login extends AppCompatActivity {
 
-    private static EditText uname,pw;
+    private EditText uname,pw;
     private static Button Login;
-    DB_Con log;
+    String loginFeedback;
+    DB_Con login=new DB_Con(this);
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-
+        Login=(Button)findViewById(R.id.login_button);
         LoginButton();
     }
 
+
     public void LoginButton()
     {
-        uname=(EditText)findViewById(R.id.login_uname);
-        pw=(EditText)findViewById(R.id.login_pw);
-        Login=(Button)findViewById(R.id.login_button);
+        Login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                uname = (EditText) findViewById(R.id.login_uname);
+                pw = (EditText) findViewById(R.id.login_pw);
 
-        Login.setOnClickListener(
-                new View.OnClickListener(){
-                    @Override
-                    public void onClick(View v) {
-                        if (uname.getText().toString().equals("k") && pw.getText().toString().equals("k"))
-                        {
-                            Toast.makeText(Login.this, "Welcome "+uname.getText().toString()+"", Toast.LENGTH_SHORT).show();
 
-                            Intent intent = new Intent(Login.this, Explore.class);
-                            startActivity(intent);
+        final String pass=(pw.getText().toString());
+                loginFeedback=login.login(pw.getText().toString());
+
+
+                Login.setOnClickListener(
+                        new View.OnClickListener(){
+                            @Override
+                            public void onClick(View v) {
+                                if (pass.equals(loginFeedback))
+                                {
+                                    Toast.makeText(Login.this, "Welcome "+uname.getText().toString()+"", Toast.LENGTH_SHORT).show();
+
+                                    Intent intent = new Intent(Login.this,  ItemExplore.class);
+                                    startActivity(intent);
+                                }
+                                else
+                                {
+                                    Toast.makeText(Login.this,"Invalid credentials",Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(Login.this,"Try Again",Toast.LENGTH_SHORT).show();
+
+                                }
+                            }
                         }
-                        else
-                        {
-                            Toast.makeText(Login.this,"Invalid credentials",Toast.LENGTH_SHORT).show();
-                            Toast.makeText(Login.this,"Try Again",Toast.LENGTH_SHORT).show();
+                );
+            }
+        });
 
-                        }
-                    }
-                }
-        );
 
     }
 

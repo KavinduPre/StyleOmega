@@ -24,13 +24,14 @@ public class MainMenu extends AppCompatActivity {
 
     public void ExploreButton(View v)
     {
-       Intent intent=new Intent(MainMenu.this,  Items.class);
+       Intent intent=new Intent(MainMenu.this,  Explore.class);
         startActivity(intent);
     }
 
 
     public void LoginButton(View v)
     {
+
         Intent intent=new Intent(MainMenu.this,Login.class);
         startActivity(intent);
     }

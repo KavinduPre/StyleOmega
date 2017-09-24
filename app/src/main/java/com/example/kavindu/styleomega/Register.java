@@ -40,8 +40,9 @@ public class Register extends AppCompatActivity {
                         boolean done=styleomega.register(fname.getText().toString(),lname.getText().toString(),uname.getText().toString(),pw.getText().toString(),email.getText().toString());
                         if(done==true) {
                             Toast.makeText(Register.this, "You Are Registered", Toast.LENGTH_LONG).show();
-                            Intent intent = new Intent(Register.this, Explore.class);
+                            Intent intent = new Intent(Register.this, Login.class);
                             startActivity(intent);
+                            Toast.makeText(Register.this, "Please Login to Continue", Toast.LENGTH_LONG).show();
 
                         }
                         else
